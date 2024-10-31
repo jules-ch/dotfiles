@@ -121,6 +121,21 @@ source <(zellij setup --generate-completion bash)
 
 #eval "$(starship init bash)"
 #eval "$(zellij setup --generate-auto-start bash)"
+eval "$(direnv hook bash)"
+
+
+# show virtual env prompt
+show_virtual_env() {
+  if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
+    echo "($(basename $VIRTUAL_ENV))"
+  fi
+}
+export -f show_virtual_env
+PS1='$(show_virtual_env)'$PS1
+
 
 . "$HOME/.cargo/env"
 source /home/jules/Code/alacritty/extra/completions/alacritty.bash
+
+
+export EDITOR="nvim"

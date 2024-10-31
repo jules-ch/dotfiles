@@ -3,3 +3,6 @@ docs
 .gitignore
 .git
 .gitmodules
+install
+setup.sh
+setup-dotfiles.sh

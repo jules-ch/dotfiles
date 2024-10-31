@@ -28,7 +28,6 @@ fi
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
-export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/opt/balena-cli:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export WORKON_HOME="$HOME/.virtualenvs"
